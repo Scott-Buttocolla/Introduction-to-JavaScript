@@ -94,19 +94,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(){
-  const dogYears = 7;
-  let humanYears= 1;
-  if(humanYears * dogYears){
-    console.log(dogYears);
-  }
-  return(dogYears(4));
-    /*add your code here*/
+function dogYears(num1){
+  return num1*7;
 }
-
-
-
-
+console.log(dogYears(2));
+dogYears(2);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -222,9 +214,22 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(num1){
+  if(num1 <= 100 && num1 >= 90){
+      return ('A');
+  } else if (num1 <= 89 && num1 >= 80){
+      return('B');
+  } else if (num1 <= 79 && num1 >=70){
+      return('C');
+  } else if (num1 <= 69 && num1 >= 60){
+      return 'D';
+  } else {
+      return 'F';
   }
+  }
+  console.log(grade(84));
+  grade(84)
+
   
   
   
