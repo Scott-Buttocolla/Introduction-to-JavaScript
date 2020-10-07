@@ -127,9 +127,28 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(age, weight){
-    /*add your code here*/
+function hungryDog(weight, age){
+  if (age>= 12 && weight <=5){
+    return weight *0.05;
+  }else if (age >= 12 && weight <= 10){
+    return weight *0.04;
+  }else if (age>= 12 && weight <=15){
+    return weight *0.03;
+  }else if(age >= 12 && weight > 15){
+    return weight *0.02;
+  }else if (age >= 2 && age < 4){
+    return weight * 0.1;
+  }else if(age >=4 && age < 7){
+    return weight * 0.05;
+  }else if(age >= 7 && age <12 ){
+    return weight * 0.04
   }
+}
+  console.log(hungryDog(15,12));
+  
+
+
+
 
 
 
@@ -146,24 +165,36 @@ Use the game function below to do the following:
   
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
+let play=["rock", "paper", "scissors"];
+let random=Math.floor(Math.random()* play.length);
+let opponent=play[random];
+console.log(opponent);
+  function game(choice){
+    if (choice==="rock" && opponent==="scissors"){
+        return "you won"
+    }
+    else if (choice ==="rock" && opponent==="paper"){
+        return "you lost"
+    }
+    else if (choice===opponent){
+        return "you tied"
+    }
+    else if (choice==="paper" && opponent==="rock"){
+        return "you won"
+    }
+    else if (choice==="paper" && opponent==="scissors"){
+        return "you lost"
+    }
+    else if (choice==="scissors" && opponent==="rock"){
+        return "you lost"
+    }
+    else if (choice==="scissors" && opponent==="paper"){
+        return "you won"
+    }
+  }
+  let myPlay = game('scissors')
+console.log(myPlay)
 
-function game(rock, paper, scissors){ 
-  
-  // var scissors = .33;
-  // var paper = 1;
-  // var rock = 2;
-  // for(let i = 0; i<2; i++){
-  //   var rPs = Math.round(Math.random());
-  //   if( scissors === 0 ) {
-  //     return 'you win!';
-  //   }else if ( paper === 1){
-  //     return 'you win!';
-  //   }else if ( rock === 2){
-  //     return 'WIN';
-  //   }else{
-  //     return 'LOST';
-  //   }
-}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -176,15 +207,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(kiloMeters){
-  // let kiloMeters= (miles/1.609){
-  //   console.log()
-  // }
-
-
-    /*add your code here*/
+function miles(meters){
+  return meters / 1.609
+  let meters= (miles/1.609);
   }
-
+console.log(2)
 
 
 //Task 5b - Feet to CM
