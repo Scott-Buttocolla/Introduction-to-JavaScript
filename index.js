@@ -146,6 +146,7 @@ function hungryDog(age,weight){
   }
 }
   console.log(hungryDog(12,15));
+  hungryDog(12,15);
   
 
 
@@ -172,25 +173,25 @@ let opponent=play[random];
 console.log(opponent);
   function game(choice){
     if (choice==="rock" && opponent==="scissors"){
-        return "you won"
+        return "you win!"
     }
     else if (choice ==="rock" && opponent==="paper"){
-        return "you lost"
+        return "you lose!"
     }
     else if (choice===opponent){
-        return "you tied"
+        return "it's a tie"
     }
     else if (choice==="paper" && opponent==="rock"){
-        return "you won"
+        return "you win!"
     }
     else if (choice==="paper" && opponent==="scissors"){
-        return "you lost"
+        return "you lose!"
     }
     else if (choice==="scissors" && opponent==="rock"){
-        return "you lost"
+        return "you lose!"
     }
     else if (choice==="scissors" && opponent==="paper"){
-        return "you won"
+        return "you win!"
     }
   }
   let myPlay = game('scissors')
@@ -208,10 +209,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(meters){
-  return meters * 1.609;
+function miles(kiloMeters){
+  return kiloMeters * 1.609;
   }
 console.log(miles(1));
+miles(1);
 
 
 //Task 5b - Feet to CM
@@ -226,7 +228,8 @@ function feet(centimeters){
   return centimeters * 30.48;
     /*add your code here*/
   }
- console.log(feet(5));
+ console.log(feet(1));
+ feet(1);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -239,10 +242,31 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
+function annoyingSong(bottles){
         /*add your code here*/
   }
-
+  var word = "bottles";
+  var count = 99;
+  while (count > 0) {
+    if (count === 1){
+      var word = "bottle"
+    }
+      console.log(count + " " + word + " of soda on the wall");
+      console.log(count + " " + word + " of soda,");
+      console.log("Take one down, pass it around,");
+      count = count - 1;
+      if (count > 0) {
+        if (count === 1){
+          var word = "bottle"
+        }
+          console.log(count + " " + word + " of soda on the wall.");
+      } else {
+        if (count < 1){
+          var word = "bottles"
+        }
+          console.log("No more " + word + " of soda on the wall.");
+      }
+  }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -261,15 +285,15 @@ Using the grade function below do the following:
   
 function grade(num1){
   if(num1 <= 100 && num1 >= 90){
-      return ('A');
+      return (' you got a A');
   } else if (num1 <= 89 && num1 >= 80){
-      return('B');
+      return('you got a B');
   } else if (num1 <= 79 && num1 >=70){
-      return('C');
+      return('you got a C');
   } else if (num1 <= 69 && num1 >= 60){
-      return 'D';
+      return 'you got a D';
   } else {
-      return 'F';
+      return 'you got a F';
   }
   }
   console.log(grade(84));
